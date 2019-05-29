@@ -82,8 +82,7 @@
     <xacro:property name="upper_arm_radius" value="0.054" />  <!-- manually measured -->
     <xacro:property name="elbow_radius" value="0.060" />      <!-- manually measured -->
     <xacro:property name="forearm_radius" value="0.040" />    <!-- manually measured -->
-    <xacro:property name="wrist_radius" value="0.045" />      <!-- manually measured -->
-
+    <xacro:property name="wrist_radius" value="0.045" />      <!-- manually measured -->   
 
     <link name="${prefix}base_link" >
       <visual>
