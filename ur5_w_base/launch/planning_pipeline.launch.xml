@@ -5,6 +5,6 @@
 
   <arg name="pipeline" default="ompl" />
 
-  <include file="$(find ur5_w_base)/launch/$(arg pipeline)_planning_pipeline.launch.xml" />
+  <include file="$(find ur5_w_base1)/launch/$(arg pipeline)_planning_pipeline.launch.xml" />
 
 </launch>

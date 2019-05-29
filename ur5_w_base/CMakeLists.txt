@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ur5_w_base)
+project(ur5_w_base1)
 
 find_package(catkin REQUIRED)
 
