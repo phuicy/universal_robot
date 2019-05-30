@@ -93,6 +93,7 @@ last_joint_states_lock = threading.Lock()
 pub_joint_states = rospy.Publisher('joint_states', JointState, queue_size=1)
 pub_wrench = rospy.Publisher('wrench', WrenchStamped, queue_size=1)
 pub_io_states = rospy.Publisher('io_states', IOStates, queue_size=1)
+pub_tool_data = rospy.Publisher('tool_data', ToolDataMsg, queue_size=1)
 #dump_state = open('dump_state', 'wb')
 
 class EOF(Exception): pass
@@ -226,6 +227,21 @@ class URConnection(object):
         msg.analog_out_states.append(Analog(1, inp))     
         #print "Publish IO-Data from robot state data"
         pub_io_states.publish(msg)
+
+
+        tool_data_msg = ToolDataMsg()
+
+        tool_data_msg.analog_input_range2 = state.tool_data.analog_input_range2
+        tool_data_msg.analog_input_range3 = state.tool_data.analog_input_range3
+        tool_data_msg.analog_input2       = state.tool_data.analog_input2
+        tool_data_msg.analog_input3       = state.tool_data.analog_input3
+        tool_data_msg.tool_voltage_48V    = state.tool_data.tool_voltage_48V
+        tool_data_msg.tool_output_voltage = state.tool_data.tool_output_voltage
+        tool_data_msg.tool_current        = state.tool_data.tool_current
+        tool_data_msg.tool_temperature    = state.tool_data.tool_temperature
+        tool_data_msg.tool_mode           = state.tool_data.tool_mode
+
+        pub_tool_data.publish(tool_data_msg)
         
 
         # Updates the state machine that determines whether we can program the robot.
