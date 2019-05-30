@@ -235,7 +235,7 @@ class URConnection(object):
         tool_data_msg.analog_input_range3 = state.tool_data.analog_input_range3
         tool_data_msg.analog_input2       = state.tool_data.analog_input2
         tool_data_msg.analog_input3       = state.tool_data.analog_input3
-        tool_data_msg.tool_voltage_48V    = state.tool_data.tool_voltage_48V
+        tool_data_msg.tool_voltage_48v    = state.tool_data.tool_voltage_48V
         tool_data_msg.tool_output_voltage = state.tool_data.tool_output_voltage
         tool_data_msg.tool_current        = state.tool_data.tool_current
         tool_data_msg.tool_temperature    = state.tool_data.tool_temperature
