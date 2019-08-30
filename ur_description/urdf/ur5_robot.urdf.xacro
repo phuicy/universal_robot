@@ -41,7 +41,7 @@
 
     <link name="plinth_link">
       <collision>
-        <origin xyz="0 0 0.402" rpy="0 0 0"/>
+        <origin xyz="0 0 0.412" rpy="0 0 0"/>
         <geometry>
            <cylinder radius="0.1" length="0.8"/>
         </geometry>
